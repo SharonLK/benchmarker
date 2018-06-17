@@ -1,0 +1,17 @@
+{
+            "name": "thread1",
+            "stamps": [
+                {
+                    "time_stamp": 200,
+                    "delay": 55
+                },
+                {
+                    "time_stamp": 250,
+                    "delay": 44
+                },
+                {
+                    "time_stamp": 300,
+                    "delay": 66
+                }
+            ]
+}
