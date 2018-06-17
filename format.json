@@ -1,0 +1,22 @@
+{
+    "output" : "benchmark_test.txt",
+    "threads": [
+        {
+            "url": "http://127.0.0.1:8080/function/test",
+            "name": "thread1",
+            "intervals": [
+                100
+            ],
+            "requests": "20"
+        },
+        {
+            "url": "http://127.0.0.1:8080/function/test",
+            "name": "thread2",
+            "intervals": [
+                1000,
+                2500
+            ],
+            "requests": "2500"
+        }
+    ]
+}
