@@ -1,7 +1,4 @@
 import json
-from collections import namedtuple
-
-ThreadOption = namedtuple("ThreadOption", ["url", "name", "intervals", "requests"])
 
 
 class Options:
@@ -12,13 +9,14 @@ class Options:
     def output(self):
         return self.j["output"]
 
-    def thread_options(self):
-        options = []
+    def url(self):
+        return self.j["url"]
 
-        for thread_option in self.j["threads"]:
-            options.append(ThreadOption(thread_option["url"],
-                                        thread_option["name"],
-                                        thread_option["intervals"],
-                                        thread_option["requests"]))
+    def name(self):
+        return self.j["name"]
 
-        return options
+    def intervals(self):
+        return self.j["intervals"]
+
+    def cycles(self):
+        return self.j["cycles"]

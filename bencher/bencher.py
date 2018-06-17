@@ -1,23 +1,15 @@
-from threading import Thread
 from time import sleep
 import argparse
-from options import Options, ThreadOption
+from options import Options
+from datetime import datetime
 
 
-def handler(thread_option: ThreadOption):
-    """Handler for the different threads that are executed in the test
+def time_millis() -> int:
+    """Return current time in milliseconds
 
-    :param thread_option: options for this thread
-    :return: None
+    :return: current time in milliseconds
     """
-    request = 0
-    for _ in range(0, len(thread_option.requests)):
-        # TODO: Send HTTP request to the given URL
-
-        print("Sleeping for {} milliseconds before next request".format(thread_option.intervals[request]))
-        sleep(thread_option.intervals[request] / 1000)
-        request += 1
-        request %= len(thread_option.intervals)
+    return int((datetime.utcnow() - datetime(1970, 1, 1)).total_seconds() * 1000)
 
 
 if __name__ == "__main__":
@@ -28,8 +20,13 @@ if __name__ == "__main__":
 
     options = Options(args.config)
 
-    # Create thread for each configured thread option and run the handler
-    for option in options.thread_options():
-        thread = Thread(target=handler, args=(option,))
-        thread.start()
-        thread.join()
+    request = 0
+    for _ in range(0, int(options.cycles())):
+        # TODO: Send HTTP request to the given URL
+        start = time_millis()
+        sleep(0.2)
+
+        print("Sleeping for {} milliseconds before next request".format(options.intervals()[request]))
+        sleep(options.intervals()[request] / 1000)
+        request += 1
+        request %= len(options.intervals())
