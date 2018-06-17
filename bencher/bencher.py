@@ -2,6 +2,7 @@ from time import sleep
 import argparse
 from options import Options
 from datetime import datetime
+import urllib.request
 
 
 def time_millis() -> int:
@@ -22,9 +23,12 @@ if __name__ == "__main__":
 
     request = 0
     for _ in range(0, int(options.cycles())):
-        # TODO: Send HTTP request to the given URL
+        # Call function and check delay
         start = time_millis()
-        sleep(0.2)
+        f = urllib.request.urlopen(options.url())
+        delay = time_millis() - start
+
+        print("Delay: {}".format(delay))
 
         print("Sleeping for {} milliseconds before next request".format(options.intervals()[request]))
         sleep(options.intervals()[request] / 1000)
