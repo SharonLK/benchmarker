@@ -1,7 +1,7 @@
 from options import Options
 
 if __name__ == "__main__":
-    options = Options("./format.json")
+    options = Options("./config_template.json")
 
     print(options.output())
     print(options.thread_options())

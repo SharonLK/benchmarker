@@ -1,5 +1,5 @@
 {
-    "output" : "benchmark_test.txt",
+    "output" : "benchmark_test.json",
     "threads": [
         {
             "url": "http://127.0.0.1:8080/function/test",
