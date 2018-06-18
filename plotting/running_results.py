@@ -2,7 +2,6 @@ import json
 
 
 class RunningResults:
-
     def __init__(self, json_to_open="output_template.json"):
         with open(json_to_open) as j:
             self.data = json.load(j)
@@ -20,5 +19,3 @@ class Stamp:
 
 if __name__ == '__main__':
     res = RunningResults()
-
-

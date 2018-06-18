@@ -1,17 +1,85 @@
 {
-            "name": "thread1",
-            "stamps": [
-                {
-                    "time_stamp": 200,
-                    "delay": 55
-                },
-                {
-                    "time_stamp": 250,
-                    "delay": 44
-                },
-                {
-                    "time_stamp": 300,
-                    "delay": 66
-                }
-            ]
+    "name": "benchmark_test.json",
+    "stamps": [
+        {
+            "time_stamp": 0,
+            "delay": 82
+        },
+        {
+            "time_stamp": 182,
+            "delay": 48
+        },
+        {
+            "time_stamp": 730,
+            "delay": 59
+        },
+        {
+            "time_stamp": 889,
+            "delay": 50
+        },
+        {
+            "time_stamp": 1440,
+            "delay": 51
+        },
+        {
+            "time_stamp": 1591,
+            "delay": 54
+        },
+        {
+            "time_stamp": 2145,
+            "delay": 49
+        },
+        {
+            "time_stamp": 2294,
+            "delay": 45
+        },
+        {
+            "time_stamp": 2840,
+            "delay": 46
+        },
+        {
+            "time_stamp": 2986,
+            "delay": 52
+        },
+        {
+            "time_stamp": 3539,
+            "delay": 52
+        },
+        {
+            "time_stamp": 3692,
+            "delay": 50
+        },
+        {
+            "time_stamp": 4242,
+            "delay": 46
+        },
+        {
+            "time_stamp": 4389,
+            "delay": 49
+        },
+        {
+            "time_stamp": 4939,
+            "delay": 52
+        },
+        {
+            "time_stamp": 5091,
+            "delay": 48
+        },
+        {
+            "time_stamp": 5640,
+            "delay": 52
+        },
+        {
+            "time_stamp": 5793,
+            "delay": 48
+        },
+        {
+            "time_stamp": 6341,
+            "delay": 55
+        },
+        {
+            "time_stamp": 6496,
+            "delay": 52
+        }
+    ]
 }
