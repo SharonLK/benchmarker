@@ -3,14 +3,14 @@ from plotting.running_results import RunningResults
 
 
 class Plotting:
-    def __init__(self, running_result_list: list):
-        self.running_result_list = running_result_list
+    def __init__(self, result: list):
+        self.result = result
         self.ax = plt.subplot()
 
     def plot_bars(self):
-        for result in self.running_result_list:
+        for result in self.result:
             for stamp in result.stamps:
-                self.ax.bar(stamp.time_stamp, stamp.delays, width=10, color='b')
+                self.ax.bar(stamp.time, stamp.delay, width=10, color='b')
 
         plt.show()
 
